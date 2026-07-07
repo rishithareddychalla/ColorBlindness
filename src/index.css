@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;650;700;800;900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* ========== Custom Scrollbar ========== */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.4);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.18);
+  border-radius: 100px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.35);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(226, 232, 240, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+/* ========== Glassmorphism Helpers ========== */
+.bg-glass {
+  background: rgba(22, 28, 45, 0.55);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+}
+
+.bg-glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+}
+
+/* ========== Ambient Background Orbs ========== */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+@keyframes float-slower {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  33% { transform: translateX(15px) translateY(-20px); }
+  66% { transform: translateX(-10px) translateY(10px); }
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.ambient-orb-1 {
+  width: 420px; height: 420px;
+  top: -80px; left: -100px;
+  background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+  animation: float-slow 18s ease-in-out infinite;
+}
+.ambient-orb-2 {
+  width: 350px; height: 350px;
+  bottom: -60px; right: -80px;
+  background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+  animation: float-slower 22s ease-in-out infinite;
+}
+.ambient-orb-3 {
+  width: 280px; height: 280px;
+  top: 40%; right: 20%;
+  background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+  animation: float-slow 25s ease-in-out infinite reverse;
+}
+
+/* Light mode orb overrides */
+:not(.dark) .ambient-orb { opacity: 0.06; }
+:not(.dark) .ambient-orb-1 {
+  background: radial-gradient(circle, #818cf8 0%, transparent 70%);
+}
+:not(.dark) .ambient-orb-2 {
+  background: radial-gradient(circle, #a78bfa 0%, transparent 70%);
+}
+:not(.dark) .ambient-orb-3 {
+  background: radial-gradient(circle, #67e8f9 0%, transparent 70%);
+}
+
+/* ========== Entrance Animations ========== */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-scale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-fade-in-scale {
+  animation: fade-in-scale 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-shimmer {
+  animation: shimmer-pulse 2.5s ease-in-out infinite;
+}
+
+/* Stagger utility classes */
+.delay-75 { animation-delay: 75ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ========== Subtle Noise Texture ========== */
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
