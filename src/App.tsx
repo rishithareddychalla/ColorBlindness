@@ -259,7 +259,7 @@ export default function App() {
                 title="Export current simulated image"
               >
                 <Download size={12} />
-                Export
+                <span className="hidden sm:inline">Export</span>
               </button>
 
               <button
@@ -351,7 +351,7 @@ export default function App() {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all duration-200 cursor-pointer relative ${
+                    className={`flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg transition-all duration-200 cursor-pointer relative ${
                       isActive 
                         ? isDark 
                           ? 'bg-white/[0.06] text-white border border-white/[0.08] shadow-sm' 
