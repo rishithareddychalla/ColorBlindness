@@ -197,3 +197,16 @@
   animation: float-drift 32s ease-in-out infinite;
 }
 
+/* ========== WhatsApp-style Repeating Doodle Pattern ========== */
+.bg-doodles {
+  background-size: 260px 260px;
+  background-repeat: repeat;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg stroke='%236366f1' stroke-width='1' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10,30 Q30,10 50,30 Q30,50 10,30 Z M22,30 A8,8 0 1,0 38,30 A8,8 0 1,0 22,30 Z' /%3E%3Cpath d='M130,45 C130,30 145,25 160,30 C175,35 175,55 160,60 C150,63 140,55 130,45 Z' /%3E%3Ccircle cx='142' cy='38' r='1.5' fill='%236366f1' /%3E%3Ccircle cx='155' cy='38' r='1.5' fill='%236366f1' /%3E%3Ccircle cx='160' cy='48' r='1.5' fill='%236366f1' /%3E%3Ccircle cx='40' cy='140' r='9' /%3E%3Ccircle cx='65' cy='140' r='9' /%3E%3Cpath d='M49,140 Q52.5,136 56,140 M31,140 Q26,135 21,140 M74,140 Q79,135 84,140' /%3E%3Cpath d='M130,120 A12,12 0 1,1 150,120 Q148,135 144,138 H136 Q132,135 130,120 Z M136,138 H144 M136,142 H144 M138,146 H142' /%3E%3Cpath d='M95,75 L98,82 L105,83 L100,88 L101,95 L95,91 L89,95 L90,88 L85,83 L92,82 Z' /%3E%3Cpath d='M95,30 C90,20 80,25 95,40 C110,25 100,20 95,30 Z' /%3E%3Cpath d='M25,85 H35 M30,80 V90 M165,95 H175 M170,90 V100 M90,170 L100,180 M100,170 L90,180' /%3E%3Cpath d='M5,185 Q15,175 25,185 T45,185 M150,185 Q160,175 170,185 T190,185' /%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark .bg-doodles {
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg stroke='%23818cf8' stroke-width='1' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10,30 Q30,10 50,30 Q30,50 10,30 Z M22,30 A8,8 0 1,0 38,30 A8,8 0 1,0 22,30 Z' /%3E%3Cpath d='M130,45 C130,30 145,25 160,30 C175,35 175,55 160,60 C150,63 140,55 130,45 Z' /%3E%3Ccircle cx='142' cy='38' r='1.5' fill='%23818cf8' /%3E%3Ccircle cx='155' cy='38' r='1.5' fill='%23818cf8' /%3E%3Ccircle cx='160' cy='48' r='1.5' fill='%23818cf8' /%3E%3Ccircle cx='40' cy='140' r='9' /%3E%3Ccircle cx='65' cy='140' r='9' /%3E%3Cpath d='M49,140 Q52.5,136 56,140 M31,140 Q26,135 21,140 M74,140 Q79,135 84,140' /%3E%3Cpath d='M130,120 A12,12 0 1,1 150,120 Q148,135 144,138 H136 Q132,135 130,120 Z M136,138 H144 M136,142 H144 M138,146 H142' /%3E%3Cpath d='M95,75 L98,82 L105,83 L100,88 L101,95 L95,91 L89,95 L90,88 L85,83 L92,82 Z' /%3E%3Cpath d='M95,30 C90,20 80,25 95,40 C110,25 100,20 95,30 Z' /%3E%3Cpath d='M25,85 H35 M30,80 V90 M165,95 H175 M170,90 V100 M90,170 L100,180 M100,170 L90,180' /%3E%3Cpath d='M5,185 Q15,175 25,185 T45,185 M150,185 Q160,175 170,185 T190,185' /%3E%3C/g%3E%3C/svg%3E");
+}
+

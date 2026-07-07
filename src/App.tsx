@@ -212,61 +212,10 @@ export default function App() {
       <div className="ambient-orb ambient-orb-2" />
       <div className="ambient-orb ambient-orb-3" />
 
-      {/* Grid lines and dot patterns */}
+      {/* Grid lines, dot patterns, and repeating doodles background */}
       <div className="bg-dot-grid absolute inset-0 pointer-events-none z-0" />
       <div className="bg-line-grid absolute inset-0 pointer-events-none z-0" />
-
-      {/* Floating vector doodles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        {/* Doodle 1: Eye Contour (A11y/Vision themed) */}
-        <svg className="absolute top-[15%] right-[8%] w-48 h-48 opacity-15 dark:opacity-[0.06] text-indigo-500 animate-float-rotate" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3">
-          <path d="M10 50 C 30 20, 70 20, 90 50 C 70 80, 30 80, 10 50 Z" />
-          <circle cx="50" cy="50" r="15" />
-          <circle cx="50" cy="50" r="6" fill="currentColor" fillOpacity="0.1" />
-        </svg>
-
-        {/* Doodle 2: Triple concentric circles with tech dashes */}
-        <svg className="absolute bottom-[10%] left-[5%] w-72 h-72 opacity-20 dark:opacity-[0.08] text-violet-500 animate-spin-slow" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="0.5">
-          <circle cx="100" cy="100" r="80" strokeDasharray="4 6" />
-          <circle cx="100" cy="100" r="50" strokeDasharray="8 8" />
-          <circle cx="100" cy="100" r="25" />
-          <line x1="100" y1="5" x2="100" y2="195" strokeDasharray="2 4" />
-          <line x1="5" y1="100" x2="195" y2="100" strokeDasharray="2 4" />
-        </svg>
-
-        {/* Doodle 3: Wavy tech ribbon curve */}
-        <svg className="absolute top-[40%] left-[8%] w-56 h-32 opacity-15 dark:opacity-[0.05] text-cyan-500 animate-float-drift" viewBox="0 0 200 100" fill="none" stroke="currentColor" strokeWidth="1">
-          <path d="M 0 50 C 50 120, 80 -20, 130 50 C 170 100, 180 20, 200 60" />
-          <path d="M 0 60 C 50 130, 80 -10, 130 60 C 170 110, 180 30, 200 70" strokeDasharray="2 2" />
-        </svg>
-
-        {/* Doodle 4: Modern geometric gridlet */}
-        <svg className="absolute top-[25%] left-[20%] w-24 h-24 opacity-25 dark:opacity-[0.09] text-indigo-400/50 animate-float-slow" viewBox="0 0 100 100" fill="currentColor">
-          {Array.from({ length: 5 }).map((_, r) => 
-            Array.from({ length: 5 }).map((_, c) => (
-              <circle key={`${r}-${c}`} cx={15 + c * 18} cy={15 + r * 18} r="2" />
-            ))
-          )}
-        </svg>
-
-        {/* Doodle 5: Plus / Sparkle shapes */}
-        <div className="absolute bottom-[28%] right-[15%] flex flex-col gap-12 opacity-20 dark:opacity-[0.08] text-violet-400 animate-float-slow">
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="12" y1="4" x2="12" y2="20" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-          </svg>
-          <svg className="w-4 h-4 translate-x-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <line x1="12" y1="4" x2="12" y2="20" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-          </svg>
-        </div>
-
-        {/* Doodle 6: Floating dashed triangle */}
-        <svg className="absolute bottom-[40%] right-[3%] w-32 h-32 opacity-10 dark:opacity-[0.04] text-amber-500 animate-float-drift" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.75" strokeDasharray="4 2">
-          <polygon points="50,15 90,85 10,85" />
-          <circle cx="50" cy="55" r="15" />
-        </svg>
-      </div>
+      <div className="bg-doodles absolute inset-0 pointer-events-none z-0" />
 
       {/* Subtle noise texture overlay */}
       <div className="noise-bg fixed inset-0 pointer-events-none z-0" />
