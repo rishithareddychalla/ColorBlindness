@@ -212,6 +212,53 @@ export default function App() {
       <div className="ambient-orb ambient-orb-2" />
       <div className="ambient-orb ambient-orb-3" />
 
+      {/* Blueprint Grid and Dot Pattern */}
+      <div className="absolute inset-0 blueprint-grid pointer-events-none z-0" />
+      <div 
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.4] dark:opacity-[0.6]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px)',
+          backgroundSize: '20px 20px',
+        }}
+      />
+
+      {/* Premium Technical Vision Doodles */}
+      <svg className="absolute top-[12%] right-[10%] w-48 h-48 text-indigo-500/10 dark:text-indigo-400/[0.03] pointer-events-none z-0 animate-float-rotate" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="100" cy="100" r="80" strokeDasharray="4 4" />
+        <circle cx="100" cy="100" r="60" />
+        <circle cx="100" cy="100" r="30" />
+        <line x1="100" y1="10" x2="100" y2="190" strokeDasharray="2 4" />
+        <line x1="10" y1="100" x2="190" y2="100" strokeDasharray="2 4" />
+        <path d="M 50,50 L 150,150 M 50,150 L 150,50" strokeDasharray="1 5" />
+      </svg>
+
+      <svg className="absolute bottom-[15%] left-[5%] w-56 h-56 text-violet-500/10 dark:text-violet-400/[0.03] pointer-events-none z-0 animate-float-slow" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="100,40 40,140 160,140" strokeWidth="2" />
+        <line x1="0" y1="110" x2="80" y2="100" strokeDasharray="4 2" />
+        <path d="M 120,105 Q 140,90 160,110 T 200,100" strokeWidth="1.5" className="text-rose-500/20 dark:text-rose-500/[0.08]" />
+        <path d="M 120,115 Q 145,110 170,125 T 200,120" strokeWidth="1.5" className="text-emerald-500/20 dark:text-emerald-500/[0.08]" />
+        <path d="M 120,125 Q 150,130 180,140 T 200,135" strokeWidth="1.5" className="text-sky-500/20 dark:text-sky-500/[0.08]" />
+      </svg>
+
+      <svg className="absolute top-[45%] right-[2%] w-40 h-40 text-cyan-500/10 dark:text-cyan-400/[0.03] pointer-events-none z-0 animate-float-slower" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="85" cy="85" r="45" />
+        <circle cx="115" cy="85" r="45" />
+        <circle cx="100" cy="115" r="45" />
+        <path d="M 100,10 L 100,30" />
+        <path d="M 10,100 L 30,100" />
+        <circle cx="100" cy="100" r="90" strokeDasharray="6 6" />
+      </svg>
+
+      <svg className="absolute top-[5%] left-[8%] w-36 h-36 text-indigo-500/10 dark:text-indigo-400/[0.03] pointer-events-none z-0 animate-float-rotate" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1">
+        <path d="M 20,100 C 60,40 140,40 180,100 C 140,160 60,160 20,100 Z" />
+        <circle cx="100" cy="100" r="28" />
+        <circle cx="100" cy="100" r="10" fill="currentColor" className="opacity-10" />
+        <line x1="100" y1="20" x2="100" y2="30" />
+        <line x1="100" y1="170" x2="100" y2="180" />
+        <line x1="20" y1="100" x2="30" y2="100" />
+        <line x1="170" y1="100" x2="180" y2="100" />
+      </svg>
+
       {/* Subtle noise texture overlay */}
       <div className="noise-bg fixed inset-0 pointer-events-none z-0" />
 
